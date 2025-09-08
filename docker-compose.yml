@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  vuln-mcp-server:
+    build: .
+    container_name: vuln-mcp-server
+    restart: "no"  # Do not restart automatically
+    user: "1000:1000"  # Non-root user
+    read_only: true  # Read-only root filesystem
+    tmpfs:
+      - /tmp:noexec,nosuid,size=100m
+    volumes:
+      # Only mount the sandbox directory
+      - ./sandbox:/app/sandbox:ro
+      # Mount a temporary directory for any temporary files
+      - /tmp:/tmp:rw
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+    networks:
+      - isolated
+    # Security options
+    security_opt:
+      - no-new-privileges:true
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+        reservations:
+          memory: 128M
+          cpus: '0.25'
+    # Capabilities
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+    # Additional security
+    sysctls:
+      - net.core.somaxconn=1024
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  isolated:
+    driver: bridge
+    internal: true  # No external network access
+
+# WARNING: This docker-compose.yml is for educational purposes only
+# DO NOT USE IN PRODUCTION ENVIRONMENTS
