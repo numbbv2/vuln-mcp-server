@@ -1,0 +1,50 @@
+MIT License
+
+Copyright (c) 2024 Vulnerable MCP Server
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## ADDITIONAL DISCLAIMER FOR VULNERABLE SOFTWARE
+
+**IMPORTANT NOTICE: This software contains intentional security vulnerabilities.**
+
+This software is designed for educational purposes only and contains known
+security vulnerabilities including Command Injection attacks. The authors
+explicitly disclaim any responsibility for:
+
+1. Any security incidents or breaches
+2. Any damage to systems or data
+3. Any misuse of this software
+4. Any consequences of using this software in production environments
+
+**DO NOT USE THIS SOFTWARE IN PRODUCTION ENVIRONMENTS**
+
+By using this software, you acknowledge that:
+- You understand the risks involved
+- You will use this software only in controlled, isolated environments
+- You will not use this software in production or live systems
+- You accept full responsibility for any consequences of using this software
+
+The authors strongly recommend using this software only in:
+- Isolated virtual machines
+- Docker containers with restricted privileges
+- Controlled laboratory environments
+- Educational settings with proper supervision
